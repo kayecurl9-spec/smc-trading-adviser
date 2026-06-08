@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-08 09:47:19 UTC",
+  "fetched_at": "2026-06-08 10:06:33 UTC",
   "symbols": [
     "BTCUSDT",
     "ETHUSDT",
@@ -23,21 +23,6 @@
   "data": {
     "BTCUSDT": {
       "15m": [
-        {
-          "open_time": 1780867800000,
-          "open_time_utc": "2026-06-07 21:30:00",
-          "open": 61781.86,
-          "high": 61846.0,
-          "low": 61680.22,
-          "close": 61710.0,
-          "volume": 111.42216,
-          "close_time": 1780868699999,
-          "close_time_utc": "2026-06-07 21:44:59",
-          "quote_volume": 6881670.3698742,
-          "trades": 26817,
-          "taker_buy_base_vol": 57.34489,
-          "taker_buy_quote_vol": 3541810.571961
-        },
         {
           "open_time": 1780868700000,
           "open_time_utc": "2026-06-07 21:45:00",
@@ -762,34 +747,34 @@
           "open_time": 1780911900000,
           "open_time_utc": "2026-06-08 09:45:00",
           "open": 63363.14,
-          "high": 63434.0,
+          "high": 63504.81,
           "low": 63333.34,
-          "close": 63378.0,
-          "volume": 21.0329,
+          "close": 63502.0,
+          "volume": 169.9023,
           "close_time": 1780912799999,
           "close_time_utc": "2026-06-08 09:59:59",
-          "quote_volume": 1333064.2319528,
-          "trades": 6985,
-          "taker_buy_base_vol": 9.75429,
-          "taker_buy_quote_vol": 618179.0592331
+          "quote_volume": 10781202.7664357,
+          "trades": 34655,
+          "taker_buy_base_vol": 115.77449,
+          "taker_buy_quote_vol": 7347129.8608947
+        },
+        {
+          "open_time": 1780912800000,
+          "open_time_utc": "2026-06-08 10:00:00",
+          "open": 63501.99,
+          "high": 63568.19,
+          "low": 63390.0,
+          "close": 63455.99,
+          "volume": 224.19651,
+          "close_time": 1780913699999,
+          "close_time_utc": "2026-06-08 10:14:59",
+          "quote_volume": 14236586.8720887,
+          "trades": 26893,
+          "taker_buy_base_vol": 147.82745,
+          "taker_buy_quote_vol": 9388099.1390898
         }
       ],
       "1h": [
-        {
-          "open_time": 1780869600000,
-          "open_time_utc": "2026-06-07 22:00:00",
-          "open": 61778.42,
-          "high": 64234.68,
-          "low": 61728.11,
-          "close": 62865.87,
-          "volume": 4892.75492,
-          "close_time": 1780873199999,
-          "close_time_utc": "2026-06-07 22:59:59",
-          "quote_volume": 308953779.249916,
-          "trades": 514549,
-          "taker_buy_base_vol": 3375.27829,
-          "taker_buy_quote_vol": 213110973.785607
-        },
         {
           "open_time": 1780873200000,
           "open_time_utc": "2026-06-07 23:00:00",
@@ -946,14 +931,29 @@
           "open": 63132.84,
           "high": 63577.86,
           "low": 63128.47,
-          "close": 63378.0,
-          "volume": 558.06286,
+          "close": 63502.0,
+          "volume": 706.93226,
           "close_time": 1780912799999,
           "close_time_utc": "2026-06-08 09:59:59",
-          "quote_volume": 35357597.601944,
-          "trades": 150266,
-          "taker_buy_base_vol": 234.81859,
-          "taker_buy_quote_vol": 14878192.8308136
+          "quote_volume": 44805736.1364269,
+          "trades": 177936,
+          "taker_buy_base_vol": 340.83879,
+          "taker_buy_quote_vol": 21607143.6324752
+        },
+        {
+          "open_time": 1780912800000,
+          "open_time_utc": "2026-06-08 10:00:00",
+          "open": 63501.99,
+          "high": 63568.19,
+          "low": 63390.0,
+          "close": 63458.0,
+          "volume": 224.73397,
+          "close_time": 1780916399999,
+          "close_time_utc": "2026-06-08 10:59:59",
+          "quote_volume": 14270692.1588155,
+          "trades": 26963,
+          "taker_buy_base_vol": 148.36391,
+          "taker_buy_quote_vol": 9422140.9698266
         }
       ],
       "1d": [
@@ -963,34 +963,19 @@
           "open": 63332.01,
           "high": 63863.06,
           "low": 62408.0,
-          "close": 63378.0,
-          "volume": 7198.45975,
+          "close": 63458.0,
+          "volume": 7572.06312,
           "close_time": 1780963199999,
           "close_time_utc": "2026-06-08 23:59:59",
-          "quote_volume": 454470611.103177,
-          "trades": 2009219,
-          "taker_buy_base_vol": 3526.04146,
-          "taker_buy_quote_vol": 222742220.1129117
+          "quote_volume": 478189441.7964754,
+          "trades": 2063852,
+          "taker_buy_base_vol": 3780.42557,
+          "taker_buy_quote_vol": 238893311.8843999
         }
       ]
     },
     "ETHUSDT": {
       "15m": [
-        {
-          "open_time": 1780867800000,
-          "open_time_utc": "2026-06-07 21:30:00",
-          "open": 1628.36,
-          "high": 1630.5,
-          "low": 1625.21,
-          "close": 1625.72,
-          "volume": 1580.0113,
-          "close_time": 1780868699999,
-          "close_time_utc": "2026-06-07 21:44:59",
-          "quote_volume": 2572065.136245,
-          "trades": 25003,
-          "taker_buy_base_vol": 697.9366,
-          "taker_buy_quote_vol": 1136103.869301
-        },
         {
           "open_time": 1780868700000,
           "open_time_utc": "2026-06-07 21:45:00",
@@ -1715,34 +1700,34 @@
           "open_time": 1780911900000,
           "open_time_utc": "2026-06-08 09:45:00",
           "open": 1663.31,
-          "high": 1665.64,
+          "high": 1672.0,
           "low": 1662.61,
-          "close": 1665.03,
-          "volume": 367.2593,
+          "close": 1671.1,
+          "volume": 4241.0034,
           "close_time": 1780912799999,
           "close_time_utc": "2026-06-08 09:59:59",
-          "quote_volume": 611241.807009,
-          "trades": 7167,
-          "taker_buy_base_vol": 192.8177,
-          "taker_buy_quote_vol": 320919.536542
+          "quote_volume": 7075430.793228,
+          "trades": 47988,
+          "taker_buy_base_vol": 2344.9864,
+          "taker_buy_quote_vol": 3912670.301712
+        },
+        {
+          "open_time": 1780912800000,
+          "open_time_utc": "2026-06-08 10:00:00",
+          "open": 1671.09,
+          "high": 1672.7,
+          "low": 1667.47,
+          "close": 1670.22,
+          "volume": 1315.5012,
+          "close_time": 1780913699999,
+          "close_time_utc": "2026-06-08 10:14:59",
+          "quote_volume": 2197231.797904,
+          "trades": 20680,
+          "taker_buy_base_vol": 552.9493,
+          "taker_buy_quote_vol": 923665.174069
         }
       ],
       "1h": [
-        {
-          "open_time": 1780869600000,
-          "open_time_utc": "2026-06-07 22:00:00",
-          "open": 1634.53,
-          "high": 1721.93,
-          "low": 1629.05,
-          "close": 1672.56,
-          "volume": 60333.9938,
-          "close_time": 1780873199999,
-          "close_time_utc": "2026-06-07 22:59:59",
-          "quote_volume": 101271636.814233,
-          "trades": 587030,
-          "taker_buy_base_vol": 30604.24,
-          "taker_buy_quote_vol": 51348564.719838
-        },
         {
           "open_time": 1780873200000,
           "open_time_utc": "2026-06-07 23:00:00",
@@ -1897,16 +1882,31 @@
           "open_time": 1780909200000,
           "open_time_utc": "2026-06-08 09:00:00",
           "open": 1661.17,
-          "high": 1671.5,
+          "high": 1672.0,
           "low": 1657.21,
-          "close": 1665.03,
-          "volume": 14704.7162,
+          "close": 1671.1,
+          "volume": 18578.4603,
           "close_time": 1780912799999,
           "close_time_utc": "2026-06-08 09:59:59",
-          "quote_volume": 24459286.247577,
-          "trades": 162271,
-          "taker_buy_base_vol": 5768.2979,
-          "taker_buy_quote_vol": 9596537.742191
+          "quote_volume": 30923475.233796,
+          "trades": 203092,
+          "taker_buy_base_vol": 7920.4666,
+          "taker_buy_quote_vol": 13188288.507361
+        },
+        {
+          "open_time": 1780912800000,
+          "open_time_utc": "2026-06-08 10:00:00",
+          "open": 1671.09,
+          "high": 1672.7,
+          "low": 1667.47,
+          "close": 1670.22,
+          "volume": 1315.5012,
+          "close_time": 1780916399999,
+          "close_time_utc": "2026-06-08 10:59:59",
+          "quote_volume": 2197231.797904,
+          "trades": 20680,
+          "taker_buy_base_vol": 552.9493,
+          "taker_buy_quote_vol": 923665.174069
         }
       ],
       "1d": [
@@ -1916,34 +1916,19 @@
           "open": 1690.5,
           "high": 1711.58,
           "low": 1645.0,
-          "close": 1665.01,
-          "volume": 180981.3034,
+          "close": 1670.22,
+          "volume": 186170.4464,
           "close_time": 1780963199999,
           "close_time_utc": "2026-06-08 23:59:59",
-          "quote_volume": 303070560.957953,
-          "trades": 2241997,
-          "taker_buy_base_vol": 83490.693,
-          "taker_buy_quote_vol": 139863200.127611
+          "quote_volume": 311731811.410285,
+          "trades": 2303468,
+          "taker_buy_base_vol": 86195.811,
+          "taker_buy_quote_vol": 144378616.06685
         }
       ]
     },
     "SOLUSDT": {
       "15m": [
-        {
-          "open_time": 1780867800000,
-          "open_time_utc": "2026-06-07 21:30:00",
-          "open": 64.59,
-          "high": 64.63,
-          "low": 64.31,
-          "close": 64.35,
-          "volume": 17107.718,
-          "close_time": 1780868699999,
-          "close_time_utc": "2026-06-07 21:44:59",
-          "quote_volume": 1102804.44452,
-          "trades": 6578,
-          "taker_buy_base_vol": 6873.36,
-          "taker_buy_quote_vol": 443100.30619
-        },
         {
           "open_time": 1780868700000,
           "open_time_utc": "2026-06-07 21:45:00",
@@ -2668,34 +2653,34 @@
           "open_time": 1780911900000,
           "open_time_utc": "2026-06-08 09:45:00",
           "open": 66.16,
-          "high": 66.24,
-          "low": 66.11,
-          "close": 66.13,
-          "volume": 2689.236,
+          "high": 66.39,
+          "low": 66.1,
+          "close": 66.38,
+          "volume": 23655.472,
           "close_time": 1780912799999,
           "close_time_utc": "2026-06-08 09:59:59",
-          "quote_volume": 177965.11816,
-          "trades": 1479,
-          "taker_buy_base_vol": 1423.457,
-          "taker_buy_quote_vol": 94209.77448
+          "quote_volume": 1567387.14558,
+          "trades": 9024,
+          "taker_buy_base_vol": 13378.604,
+          "taker_buy_quote_vol": 886424.92037
+        },
+        {
+          "open_time": 1780912800000,
+          "open_time_utc": "2026-06-08 10:00:00",
+          "open": 66.37,
+          "high": 66.44,
+          "low": 66.21,
+          "close": 66.32,
+          "volume": 12114.112,
+          "close_time": 1780913699999,
+          "close_time_utc": "2026-06-08 10:14:59",
+          "quote_volume": 803486.52976,
+          "trades": 5228,
+          "taker_buy_base_vol": 6179.15,
+          "taker_buy_quote_vol": 409795.43425
         }
       ],
       "1h": [
-        {
-          "open_time": 1780869600000,
-          "open_time_utc": "2026-06-07 22:00:00",
-          "open": 64.64,
-          "high": 67.92,
-          "low": 64.53,
-          "close": 65.83,
-          "volume": 318835.326,
-          "close_time": 1780873199999,
-          "close_time_utc": "2026-06-07 22:59:59",
-          "quote_volume": 21145427.06705,
-          "trades": 144997,
-          "taker_buy_base_vol": 177900.937,
-          "taker_buy_quote_vol": 11802528.01859
-        },
         {
           "open_time": 1780873200000,
           "open_time_utc": "2026-06-07 23:00:00",
@@ -2850,16 +2835,31 @@
           "open_time": 1780909200000,
           "open_time_utc": "2026-06-08 09:00:00",
           "open": 65.63,
-          "high": 66.24,
+          "high": 66.39,
           "low": 65.6,
-          "close": 66.13,
-          "volume": 80792.716,
+          "close": 66.38,
+          "volume": 101754.182,
           "close_time": 1780912799999,
           "close_time_utc": "2026-06-08 09:59:59",
-          "quote_volume": 5332423.03237,
-          "trades": 31554,
-          "taker_buy_base_vol": 38145.403,
-          "taker_buy_quote_vol": 2517393.69704
+          "quote_volume": 6721529.61969,
+          "trades": 39094,
+          "taker_buy_base_vol": 50100.55,
+          "taker_buy_quote_vol": 3309608.84293
+        },
+        {
+          "open_time": 1780912800000,
+          "open_time_utc": "2026-06-08 10:00:00",
+          "open": 66.37,
+          "high": 66.44,
+          "low": 66.21,
+          "close": 66.32,
+          "volume": 12114.562,
+          "close_time": 1780916399999,
+          "close_time_utc": "2026-06-08 10:59:59",
+          "quote_volume": 803516.37376,
+          "trades": 5233,
+          "taker_buy_base_vol": 6179.15,
+          "taker_buy_quote_vol": 409795.43425
         }
       ],
       "1d": [
@@ -2869,34 +2869,19 @@
           "open": 66.5,
           "high": 67.11,
           "low": 64.98,
-          "close": 66.13,
-          "volume": 994815.884,
+          "close": 66.32,
+          "volume": 1027891.912,
           "close_time": 1780963199999,
           "close_time_utc": "2026-06-08 23:59:59",
-          "quote_volume": 65663740.86356,
-          "trades": 383167,
-          "taker_buy_base_vol": 472649.221,
-          "taker_buy_quote_vol": 31208799.97936
+          "quote_volume": 67856363.82464,
+          "trades": 395940,
+          "taker_buy_base_vol": 490783.518,
+          "taker_buy_quote_vol": 32410810.5595
         }
       ]
     },
     "XRPUSDT": {
       "15m": [
-        {
-          "open_time": 1780867800000,
-          "open_time_utc": "2026-06-07 21:30:00",
-          "open": 1.1286,
-          "high": 1.1298,
-          "low": 1.1257,
-          "close": 1.1262,
-          "volume": 903230.0,
-          "close_time": 1780868699999,
-          "close_time_utc": "2026-06-07 21:44:59",
-          "quote_volume": 1018094.74962,
-          "trades": 3603,
-          "taker_buy_base_vol": 369208.4,
-          "taker_buy_quote_vol": 416161.60574
-        },
         {
           "open_time": 1780868700000,
           "open_time_utc": "2026-06-07 21:45:00",
@@ -3621,34 +3606,34 @@
           "open_time": 1780911900000,
           "open_time_utc": "2026-06-08 09:45:00",
           "open": 1.1465,
-          "high": 1.1489,
+          "high": 1.1502,
           "low": 1.1462,
-          "close": 1.1479,
-          "volume": 152634.6,
+          "close": 1.1501,
+          "volume": 723012.1,
           "close_time": 1780912799999,
           "close_time_utc": "2026-06-08 09:59:59",
-          "quote_volume": 175172.36481,
-          "trades": 1087,
-          "taker_buy_base_vol": 77528.9,
-          "taker_buy_quote_vol": 88979.81815
+          "quote_volume": 830502.46519,
+          "trades": 4605,
+          "taker_buy_base_vol": 459019.1,
+          "taker_buy_quote_vol": 527284.38471
+        },
+        {
+          "open_time": 1780912800000,
+          "open_time_utc": "2026-06-08 10:00:00",
+          "open": 1.1501,
+          "high": 1.1524,
+          "low": 1.1491,
+          "close": 1.1512,
+          "volume": 536249.0,
+          "close_time": 1780913699999,
+          "close_time_utc": "2026-06-08 10:14:59",
+          "quote_volume": 617032.83101,
+          "trades": 2994,
+          "taker_buy_base_vol": 363561.9,
+          "taker_buy_quote_vol": 418335.55584
         }
       ],
       "1h": [
-        {
-          "open_time": 1780869600000,
-          "open_time_utc": "2026-06-07 22:00:00",
-          "open": 1.1305,
-          "high": 1.1719,
-          "low": 1.1283,
-          "close": 1.1535,
-          "volume": 10496666.6,
-          "close_time": 1780873199999,
-          "close_time_utc": "2026-06-07 22:59:59",
-          "quote_volume": 12130689.51404,
-          "trades": 96156,
-          "taker_buy_base_vol": 5127102.8,
-          "taker_buy_quote_vol": 5923418.78702
-        },
         {
           "open_time": 1780873200000,
           "open_time_utc": "2026-06-07 23:00:00",
@@ -3803,16 +3788,31 @@
           "open_time": 1780909200000,
           "open_time_utc": "2026-06-08 09:00:00",
           "open": 1.1398,
-          "high": 1.1489,
+          "high": 1.1502,
           "low": 1.1397,
-          "close": 1.1479,
-          "volume": 2820416.2,
+          "close": 1.1501,
+          "volume": 3390793.7,
           "close_time": 1780912799999,
           "close_time_utc": "2026-06-08 09:59:59",
-          "quote_volume": 3228920.00306,
-          "trades": 19861,
-          "taker_buy_base_vol": 1226686.8,
-          "taker_buy_quote_vol": 1404756.25134
+          "quote_volume": 3884250.10344,
+          "trades": 23379,
+          "taker_buy_base_vol": 1608177.0,
+          "taker_buy_quote_vol": 1843060.8179
+        },
+        {
+          "open_time": 1780912800000,
+          "open_time_utc": "2026-06-08 10:00:00",
+          "open": 1.1501,
+          "high": 1.1524,
+          "low": 1.1491,
+          "close": 1.1513,
+          "volume": 536289.7,
+          "close_time": 1780916399999,
+          "close_time_utc": "2026-06-08 10:59:59",
+          "quote_volume": 617079.68892,
+          "trades": 3003,
+          "taker_buy_base_vol": 363602.6,
+          "taker_buy_quote_vol": 418382.41375
         }
       ],
       "1d": [
@@ -3822,14 +3822,14 @@
           "open": 1.1556,
           "high": 1.1677,
           "low": 1.1319,
-          "close": 1.1479,
-          "volume": 39327947.8,
+          "close": 1.1513,
+          "volume": 40434615.0,
           "close_time": 1780963199999,
           "close_time_utc": "2026-06-08 23:59:59",
-          "quote_volume": 45163144.14405,
-          "trades": 285636,
-          "taker_buy_base_vol": 18980621.0,
-          "taker_buy_quote_vol": 21802909.14956
+          "quote_volume": 46435553.93335,
+          "trades": 292157,
+          "taker_buy_base_vol": 19725713.8,
+          "taker_buy_quote_vol": 22659596.12987
         }
       ]
     }
