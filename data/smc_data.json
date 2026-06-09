@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-09 08:42:11 UTC",
+  "fetched_at": "2026-06-09 08:45:46 UTC",
   "symbols": [
     "SOLUSDT"
   ],
@@ -20,21 +20,6 @@
   "data": {
     "SOLUSDT": {
       "15m": [
-        {
-          "open_time": 1780949700000,
-          "open_time_utc": "2026-06-08 20:15:00",
-          "open": 67.1,
-          "high": 67.2,
-          "low": 66.94,
-          "close": 67.02,
-          "volume": 23348.942,
-          "close_time": 1780950599999,
-          "close_time_utc": "2026-06-08 20:29:59",
-          "quote_volume": 1566075.95502,
-          "trades": 6665,
-          "taker_buy_base_vol": 11799.277,
-          "taker_buy_quote_vol": 791439.10864
-        },
         {
           "open_time": 1780950600000,
           "open_time_utc": "2026-06-08 20:30:00",
@@ -759,16 +744,31 @@
           "open_time": 1780993800000,
           "open_time_utc": "2026-06-09 08:30:00",
           "open": 66.61,
-          "high": 66.74,
+          "high": 66.79,
           "low": 66.52,
-          "close": 66.71,
-          "volume": 18975.514,
+          "close": 66.72,
+          "volume": 20282.856,
           "close_time": 1780994699999,
           "close_time_utc": "2026-06-09 08:44:59",
-          "quote_volume": 1264582.52605,
-          "trades": 6210,
-          "taker_buy_base_vol": 9578.765,
-          "taker_buy_quote_vol": 638345.80516
+          "quote_volume": 1351860.13956,
+          "trades": 7174,
+          "taker_buy_base_vol": 10250.47,
+          "taker_buy_quote_vol": 683184.24649
+        },
+        {
+          "open_time": 1780994700000,
+          "open_time_utc": "2026-06-09 08:45:00",
+          "open": 66.71,
+          "high": 66.76,
+          "low": 66.7,
+          "close": 66.75,
+          "volume": 644.761,
+          "close_time": 1780995599999,
+          "close_time_utc": "2026-06-09 08:59:59",
+          "quote_volume": 43021.53159,
+          "trades": 338,
+          "taker_buy_base_vol": 399.337,
+          "taker_buy_quote_vol": 26648.73071
         }
       ],
       "1h": [
@@ -943,14 +943,14 @@
           "open": 66.9,
           "high": 66.94,
           "low": 66.39,
-          "close": 66.71,
-          "volume": 79536.524,
+          "close": 66.75,
+          "volume": 81487.563,
           "close_time": 1780995599999,
           "close_time_utc": "2026-06-09 08:59:59",
-          "quote_volume": 5296871.39872,
-          "trades": 24921,
-          "taker_buy_base_vol": 38674.592,
-          "taker_buy_quote_vol": 2575679.3965
+          "quote_volume": 5427099.56438,
+          "trades": 26221,
+          "taker_buy_base_vol": 39744.57,
+          "taker_buy_quote_vol": 2647095.5891
         }
       ],
       "1d": [
@@ -960,14 +960,14 @@
           "open": 66.82,
           "high": 67.47,
           "low": 65.29,
-          "close": 66.71,
-          "volume": 1172550.952,
+          "close": 66.75,
+          "volume": 1174501.991,
           "close_time": 1781049599999,
           "close_time_utc": "2026-06-09 23:59:59",
-          "quote_volume": 77992015.50377,
-          "trades": 318649,
-          "taker_buy_base_vol": 562046.104,
-          "taker_buy_quote_vol": 37420005.67155
+          "quote_volume": 78122243.66943,
+          "trades": 319949,
+          "taker_buy_base_vol": 563116.082,
+          "taker_buy_quote_vol": 37491421.86415
         }
       ]
     }
