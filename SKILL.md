@@ -1,15 +1,6 @@
 ---
 name: smc-trading-adviser
-description: >
-  Acts as a live Smart Money Concept (SMC) trading adviser for crypto markets.
-  Use this skill whenever the user asks about trade opportunities, entry prices, whether to
-  long or short, where to place a stop loss, where the next liquidity target is, or whether
-  there is a current SMC setup on any crypto pair. Trigger on phrases like "should I long",
-  "is there a short opportunity", "where can I enter", "what's the bias on BTC", "is there
-  an order block at this price", "where's the liquidity", "give me a trade setup", "analyse
-  this pair", "is there an FVG", "show me the fair value gap", or any question implying a
-  live SMC market read. Always use this skill when the user wants real-time trade advice —
-  even if they don't use the words "SMC", "Order Block", or "FVG".
+description: "Acts as a live Smart Money Concept (SMC) trading adviser for crypto markets.   Use this skill whenever the user asks about trade opportunities, entry prices, whether to   long or short, where to place a stop loss, where the next liquidity target is, or whether   there is a current SMC setup on any crypto pair. Trigger on phrases like \"should I long\",   \"is there a short opportunity\", \"where can I enter\", \"what's the bias on BTC\", \"is there   an order block at this price\", \"where's the liquidity\", \"give me a trade setup\", \"analyse   this pair\", \"is there an FVG\", \"show me the fair value gap\", or any question implying a   live SMC market read. Always use this skill when the user wants real-time trade advice —   even if they don't use the words \"SMC\", \"Order Block\", or \"FVG\"."
 ---
 
 # SMC Trading Adviser Skill
@@ -33,7 +24,7 @@ delivering a clear trade recommendation with a structured summary + plain-Englis
 ## Step 1 — Parse the User's Question
 
 Extract from the user's message:
-- **Symbol**: e.g. BTCUSDT, ETHXUSDT (default to the first symbol in the feed if not specified)
+- **Symbol**: e.g. BTCUSDT, ETHUSDT (default to the first symbol in the feed if not specified)
 - **Direction question**: Are they asking about longs, shorts, or overall bias?
 - **Timeframe preference**: If mentioned (default: analyse both 15m and 1h)
 
@@ -41,47 +32,70 @@ If the symbol is missing and context is ambiguous, ask once: *"Which pair are yo
 
 ---
 
-## Step 2 — Fetch Live Data from Market Data JSON
+## Step 2 — Fetch Live Data from Binance Public API (Browser-Side)
 
-**Always** fetch market data from this single URL using the `web_fetch` tool:
+**Always** fetch market data using a browser-side HTML artifact that calls Binance's public
+REST API directly via `fetch()`. This runs in the user's browser, not on Claude's server, and
+hits Binance's documented public market-data endpoint — no API key required, no server-side
+egress restrictions apply since the request never leaves the browser.
+
+This is the **only** data source. Do not use third-party mirrors, GitHub-hosted JSON dumps, or
+any unverified relay of price data. If Binance is unreachable for the user's region, fall back
+to another reputable, named exchange's public API (e.g. Coinbase, Kraken) — never an
+unverifiable intermediary.
+
+### Endpoint:
 
 ```
-https://raw.githubusercontent.com/kayecurl9-spec/smc-trading-adviser/main/smc_data.json
+https://api.binance.com/api/v3/klines?symbol={SYMBOL}&interval={INTERVAL}&limit={LIMIT}
 ```
 
-This is the **only** data source. Do not call Binance APIs directly. Do not skip this fetch.
+Fetch three calls per analysis:
 
-### JSON structure:
-
-```json
-{
-  "fetched_at": "...",
-  "symbols": ["BTCUSDT", "ETHUSDT", ...],
-  "data": {
-    "SYMBOLUSDT": {
-      "15m": [ { "open": ..., "high": ..., "low": ..., "close": ..., "volume": ..., "open_time_utc": "..." }, ... ],
-      "1h":  [ { "open": ..., "high": ..., "low": ..., "close": ..., "volume": ... }, ... ],
-      "1d":  [ { ... } ]
-    }
-  }
-}
+```
+https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=50
+https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&limit=12
+https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=3
 ```
 
-### How to use it:
+### Raw response shape (array of arrays per candle):
 
-1. Fetch the URL with `web_fetch`.
-2. Parse the JSON.
-3. Check `data` for the symbol the user asked about (e.g. `BTCUSDT`).
-   - If the symbol is **not present**, tell the user and list the available symbols from the `symbols` array.
-4. Use the last entry in the `15m` array's `close` field as the current price.
-5. Use the `1d` candle (if present) to compute the approximate 24h price change: `(close - open) / open * 100`.
-6. Pass the `15m` candle array to the OB / FVG / liquidity / ATR logic (Step 3).
-7. Pass the `1h` candle array to the HTF bias logic (Step 3A).
-8. Each candle object has fields: `open`, `high`, `low`, `close`, `volume`, `open_time_utc`.
+```
+[
+  [
+    1655971200000,      // open time (ms)
+    "29000.00",         // open
+    "29250.00",         // high
+    "28900.00",         // low
+    "29100.00",         // close
+    "1234.5678",        // volume
+    1655974799999,      // close time
+    "...", "...", "...", "...", "..."  // ignore remaining fields
+  ],
+  ...
+]
+```
+
+### How to use it, inside the artifact's JS:
+
+1. Build the three URLs above for the requested symbol.
+2. `fetch()` each endpoint and parse the JSON arrays.
+3. Map each raw candle array into an object: `{ open_time_utc, open, high, low, close, volume }`,
+   converting strings to numbers and the open-time epoch ms into an ISO/UTC string.
+4. Use the last (most recent) entry in the `15m` array's `close` as the current price.
+5. Use the most recent `1d` candle to compute 24h change: `(close - open) / open * 100`.
+6. Pass the mapped `15m` candle array to the OB / FVG / liquidity / ATR logic (Step 3).
+7. Pass the mapped `1h` candle array to the HTF bias logic (Step 3A).
+8. Run all SMC calculations (Step 3 onward) client-side in the same artifact, then render the
+   Step 4 output format directly in the widget — do not round-trip the data back through the
+   model unless the user asks for a written explanation alongside the visual.
 
 ### If the fetch fails:
 
-Tell the user the data feed could not be reached and ask them to paste recent OHLCV data manually.
+Binance's API is occasionally geo-blocked for some browsers/regions. If the fetch fails (CORS
+error, 451, timeout), show the user the error and offer to retry against a fallback exchange
+endpoint (e.g. Coinbase's public `/products/{pair}/candles` or Kraken's public `/OHLC`), or ask
+them to paste data manually. Never silently substitute synthetic or placeholder numbers.
 
 ---
 
@@ -338,6 +352,7 @@ If OB+FVG confluence exists: **⭐ OB + FVG Confluence at $X–$X — highest-pr
 
 If any OB filter fails, show NO CLEAR SETUP and state which filter rejected the OB.
 If only an FVG entry is available (no valid OB), label the setup as "FVG Entry" and note it is lower conviction than an OB setup.
+If no entry setup is found at all, you MUST provide a recommendation for a future setup (e.g., "Wait for a sweep of $X liquidity before looking for longs", or "Monitor $X level for a potential bearish OB formation").
 
 ---
 
@@ -369,8 +384,8 @@ One line. E.g.: *"Wait for a 15m candle close inside the OB/FVG before entering 
 | RR < 2.5 | "Setup exists but RR is too low (X:1) — skip or wait for a deeper pullback" |
 | Ranging market | Give both bull and bear invalidation levels; list any FVGs in both directions as targets |
 | CHoCH detected | Flag as early signal; recommend waiting for confirmation before full-size entry |
-| Data feed fetch fails | Tell user the market data JSON couldn't be fetched, ask them to paste recent OHLCV |
-| Symbol not in JSON | List available symbols from the `symbols` array; ask user to choose one |
+| Data feed fetch fails | Tell the user the Binance fetch failed, offer to retry against a fallback exchange (Coinbase/Kraken public API), or ask them to paste candle data manually |
+| Symbol not found on exchange | Tell the user the symbol returned an error from Binance; ask them to confirm the correct ticker (e.g. BTCUSDT vs BTC-USD) |
 
 ---
 
